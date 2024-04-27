@@ -1,8 +1,21 @@
-export class User {
-    constructor(
-        public name: string,
-        public id?: string
-    ) {
+import { CPF } from "../shared/CPF"
+import { Entity, EntityProps } from "../shared/Entity"
+import { Id } from "../shared/Id"
+import { UserName } from "../shared/UserName"
 
+export interface UserProps extends EntityProps {
+    name?: string
+    cpf?: string
+}
+
+export class User extends Entity<User, UserProps> {
+    readonly name: UserName
+    readonly cpf: CPF
+
+    constructor(props: UserProps) {
+        super(props)
+
+        this.name = new UserName(props.name)
+        this.cpf = new CPF(props.cpf)
     }
 }

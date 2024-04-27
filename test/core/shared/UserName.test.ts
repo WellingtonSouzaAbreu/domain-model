@@ -15,6 +15,10 @@ describe('Teste de UserName.ts', () => {
         expect(() => new UserName(largeName)).toThrow(errorMessages.LARGE_NAME)
     })
 
+    test('Deve lançar um erro ao tentar criar nome undefined', () => {
+        expect(() => new UserName()).toThrow(errorMessages.SINGLE_NAME)
+    })
+
     test('Deve lançar um erro ao tentar criar nome sem sobrenome', () => {
         expect(() => new UserName('Wellington')).toThrow(errorMessages.SINGLE_NAME)
     })

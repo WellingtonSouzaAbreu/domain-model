@@ -14,6 +14,10 @@ export class Validator {
         return value.trim() !== '' ? null : errorMessage
     }
 
+    /*  static isTrue(value: string, errorMessage: string): string | null {
+         return !!value ? null : errorMessage
+     } */
+
     static sizeSmallerThan(value: string | any[], minSize: number, errorMessage: string): string | null {
         if (Validator.notNull(value, errorMessage)) return errorMessage
         return value.length > minSize ? null : errorMessage
