@@ -1,5 +1,12 @@
 const errorMessages = {
-    INVALID_PASSWORD: 'Senha inválida!'
+    INVALID_PASSWORD: 'INVALID_PASSWORD',
+
+    EMPTY_NAME: 'EMPTY_NAME',
+    SINGLE_NAME: 'SINGLE_NAME',
+    NULL_NAME: 'NULL_NAME',
+    NAME_INVALID_CHARACTERS: 'NAME_INVALID-CHARACTERS',
+    SMALL_NAME: 'SMALL_NAME',
+    LARGE_NAME: 'LARGE_NAME',
 }
 
 export { errorMessages }
