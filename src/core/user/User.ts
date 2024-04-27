@@ -1,6 +1,5 @@
 import { CPF } from "../shared/CPF"
 import { Entity, EntityProps } from "../shared/Entity"
-import { Id } from "../shared/Id"
 import { UserName } from "../shared/UserName"
 
 export interface UserProps extends EntityProps {

@@ -3,5 +3,10 @@ module.exports = {
 	testEnvironment: 'node',
 	testMatch: ["**/test/**/*.test.ts"],
 	collectCoverage: true, // Deixar true para visualizar % de cobertura de testes
-	moduleNameMapper: { "^@/(.*)$": "<rootDir>/src/$1" }
+	moduleNameMapper: { 
+		"^@/test/(.*)$": "<rootDir>/test/$1",
+		"^@/(.*)$": "<rootDir>/src/$1" 
+	},
+	coveragePathIgnorePatterns: ['./test/data']
 }
+

@@ -12,7 +12,7 @@ export class UserName {
             Validator.sizeSmallerThan(this.name, 3, errorMessages.SMALL_NAME),
             Validator.sizeBigThan(this.name, 30, errorMessages.LARGE_NAME),
             Validator.notEmpty(this.name.split(' ')[1], errorMessages.SINGLE_NAME),
-            Validator.regex(this.name, /^[a-zA-ZÁ-ú\s]+$/, errorMessages.NAME_INVALID_CHARACTERS),
+            Validator.regex(this.name, /^[a-zA-ZÁ-ú'-\.\s]+$/, errorMessages.NAME_INVALID_CHARACTERS),
         )
 
         if (errors) throw new Error(errors.join(', '))
