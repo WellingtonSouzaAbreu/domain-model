@@ -5,7 +5,7 @@ import { User } from "@/core/user/User"
 import { UserBuilder } from '@/test/data/UserBuilder';
 
 test('Deve lançar erro ao tentar criar uma pessoa com nome vazio', () => {
-    expect(() => new User({ name: '', cpf: '408.375.000-65' })).toThrow(errorMessages.EMPTY_NAME)
+    expect(() => UserBuilder.create().withCpf('408.375.000-65').withName('').build()).toThrow(errorMessages.EMPTY_NAME)
 })
 
 test('Deve criar um usuário válido', () => {
