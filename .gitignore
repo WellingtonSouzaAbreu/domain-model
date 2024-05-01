@@ -1,2 +1,6 @@
+domain-model/node_modules/**/*
 node_modules/**/*
 coverage/**/*
+domain-model/coverage/**/*
+node_modules
+

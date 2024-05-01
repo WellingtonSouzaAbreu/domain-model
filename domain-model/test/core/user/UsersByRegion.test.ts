@@ -10,6 +10,8 @@ test('Deve agrupar usuários da região de SP', () => {
     const sameRegion = usersSP.every((p) => p.cpf.region.isEqual(RegionCPF.SP))
     const differentRegion = usersSP.every((p) => p.cpf.region.isDifferent(RegionCPF.SP))
 
+    console.log(users.map((u) => u.cpf.region.states))
+
     expect(sameRegion).toBe(true)
     expect(differentRegion).toBe(false)
 })
