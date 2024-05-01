@@ -1,5 +1,6 @@
 import { errorMessages } from "@/core/constants/errorMessages"
 import { CPF } from "@/core/shared/CPF"
+import { RegionCPF } from "@/core/shared/RegionCPF"
 
 describe('Teste de CPF.ts', () => {
     test('Deve criar corretamente quando o cpf for válido', () => {
@@ -30,5 +31,13 @@ describe('Teste de CPF.ts', () => {
     test('Deve retornar o CPF formadado', () => {
         const cpf = new CPF('71296082008')
         expect(cpf.formated()).toBe('712.960.820-08')
+    })
+
+    test('Deve retornar a regiao do CPF', () => {
+        const cpf1 = new CPF('048.415.792-22')
+        const cpf2 = new CPF('501.530.390-43')
+
+        expect(cpf1.region).toBe(RegionCPF.AC_AM_AP_PA_RO_RR)
+        expect(cpf2.region).toBe(RegionCPF.RS)
     })
 })

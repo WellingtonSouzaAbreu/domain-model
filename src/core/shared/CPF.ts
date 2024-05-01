@@ -1,5 +1,6 @@
 import { errorMessages } from '../constants/errorMessages'
 import { Validator } from '../utils/Validator'
+import { RegionCPF } from './RegionCPF'
 
 export class CPF {
     readonly value: string
@@ -15,6 +16,10 @@ export class CPF {
         if (!CPF.validateCPF(value!)) throw new Error(errorMessages.INVALID_CPF)
 
         this.value = this.clearCPF(value!)
+    }
+
+    get region(): RegionCPF {
+        return RegionCPF.getByCpf(this.value)
     }
 
     formated() {
