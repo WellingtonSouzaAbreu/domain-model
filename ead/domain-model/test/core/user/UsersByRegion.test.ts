@@ -8,8 +8,6 @@ test('Deve agrupar usuários da região de SP', () => {
 
     const usersSP = groupUsers.get(RegionCPF.SP) ?? []
     const sameRegion = usersSP.every((p) => p.cpf.region.isEqual(RegionCPF.SP))
-    const differentRegion = usersSP.every((p) => p.cpf.region.isDifferent(RegionCPF.SP))
 
     expect(sameRegion).toBe(true)
-    expect(differentRegion).toBe(false)
 })

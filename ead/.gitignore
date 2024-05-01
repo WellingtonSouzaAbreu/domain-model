@@ -1,0 +1,4 @@
+node_modules/**/*
+coverage/**/*
+domain-model/coverage/**/*
+ead-model/**/*
